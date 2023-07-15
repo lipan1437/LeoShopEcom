@@ -9,6 +9,7 @@ import Cart from "./Pages/Cart";
 import Errorpage from "./Pages/Errorpage";
 import { GlobalStyle } from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
+import Header from "./components/Header";
 function App() {
 
   const theme = {
@@ -37,6 +38,7 @@ function App() {
     <ThemeProvider theme={theme}>
     <BrowserRouter>
       <GlobalStyle />
+      <Header/>
       <h3>Welcome to Leo Shop E-Commerce Website</h3>
       <Routes>
         <Route path="/" element={<Home />} />
