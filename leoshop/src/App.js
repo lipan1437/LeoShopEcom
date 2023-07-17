@@ -39,7 +39,6 @@ function App() {
     <BrowserRouter>
       <GlobalStyle />
       <Header/>
-      <h3>Welcome to Leo Shop E-Commerce Website</h3>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
