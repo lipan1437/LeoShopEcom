@@ -18,7 +18,7 @@ const HeroSection = ({ myData }) => {
               animi! Suscipit sapiente.
             </p>
             <NavLink>
-              <Button>show now</Button>
+              <Button>shop now</Button>
             </NavLink>
           </div>
           {/* our homepage image */}
@@ -74,7 +74,7 @@ const Wrapper = styled.section`
       content: "";
       width: 60%;
       height: 80%;
-      background-color: rgba(81, 56, 238, 0.4);
+      background-color: rgba(60,128,120,0.4);
       position: absolute;
       left: 50%;
       top: -5rem;
@@ -98,7 +98,7 @@ const Wrapper = styled.section`
       left: 0;
       top: 10%;
       /* bottom: 10%; */
-      background-color: rgba(81, 56, 238, 0.4);
+      background-color:rgba(60,128,120,0.4);;
     }
   }
 `;
