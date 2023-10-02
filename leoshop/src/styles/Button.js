@@ -5,7 +5,7 @@ export const Button = styled.button`
   max-width: auto;
   background-color: #2a9d8f;
   color: rgb(255 255 255);
-  padding: 1.4rem 2.4rem;
+  padding: 1rem 2rem;
   border: none;
   text-transform: uppercase;
   text-align: center;
