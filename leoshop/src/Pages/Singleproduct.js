@@ -51,7 +51,7 @@ const Singleproduct = () => {
           {/* product data */}
           <div className="product-data">
             <h2>{name}</h2>
-            <Star stars={stars} reviews={reviews}/>
+            <Star stars={stars} reviews={reviews} />
             <p className="product-data-price">
               MRP:
               <del>
@@ -93,6 +93,7 @@ const Singleproduct = () => {
                 Brand: <span>{company}</span>
               </p>
             </div>
+            <hr />
           </div>
         </div>
       </Container>
@@ -166,7 +167,6 @@ const Wrapper = styled.section`
       color: red;
     }
   }
-
 
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     padding: 0 2.4rem;
