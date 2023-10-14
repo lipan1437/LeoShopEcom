@@ -1,11 +1,38 @@
-import React from 'react'
-
+import React from "react";
+import styled from "styled-components";
+import FilterSection from "../components/FilterSection";
+import Sort from "../components/Sort";
+import ProductList from "../components/ProductList";
 const Products = () => {
   return (
-    <div>
-      Products page
-    </div>
-  )
-}
+    <Wrapper>
+      <div className="container grid grid-filter-column">
+        <div>
+          <FilterSection />
+        </div>
+        <section className="product-view--sort">
+          <div className="sort-filter">
+            <Sort />
+            <div className="main-product">
+              <ProductList/>
+            </div>
+          </div>
+        </section>
+      </div>
+    </Wrapper>
+  );
+};
 
-export default Products
+const Wrapper = styled.section`
+  .grid-filter-column {
+    grid-template-columns: 0.2fr 1fr;
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    .grid-filter-column {
+      grid-template-columns: 1fr;
+    }
+  }
+`;
+
+export default Products;
