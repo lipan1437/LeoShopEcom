@@ -53,7 +53,6 @@ const filterReducer = (state, action) => {
           b.name.localeCompare(a.name)
         );
       }
-
       return {
         ...state,
         filter_products: newSortData,
