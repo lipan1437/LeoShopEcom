@@ -13,7 +13,6 @@ const ProductReducer = (state, action) => {
   //         isError: true
   //     };
   // }
-
   switch (action.type) {
     case "SET_LOADING":
       return {
