@@ -4,10 +4,22 @@ import { useFilterContext } from "../context/filter_context";
 const FilterSection = () => {
   const {
     filters: { text },
-    updateFilterValue
+    all_products,
+    updateFilterValue,
   } = useFilterContext();
 
+  // TO GET THE UNIQUE DATA OF EACH FIELDS
+  const getUniqueData = (data, property) => {
+    let newVal = data.map((curElem) => {
+      return curElem[property];
+    });
+    newVal = ["All",...new Set(newVal)];
+    console.log(newVal);
+  };
 
+  // We Need UNIQUE Data
+
+  const categoryOnlyData = getUniqueData(all_products, "category");
 
   return (
     <Wrapper>
@@ -18,6 +30,7 @@ const FilterSection = () => {
             name="text"
             value={text}
             onChange={updateFilterValue}
+            placeholder="SEARCH"
           />
         </form>
       </div>
