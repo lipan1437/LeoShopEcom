@@ -6,10 +6,12 @@ const FilterContext = createContext();
 const initialState = {
   filter_products: [],
   all_products: [],
-  grid_view: false,
+  grid_view: true,
   sorting_value: "lowest",
   filters: {
     text: "",
+    category: "all",
+    company: "all",
   },
 };
 
@@ -42,7 +44,7 @@ export const FilterContextProvider = ({ children }) => {
 
   // to sort the product
   useEffect(() => {
-    dispatch({type: "FILTER_PRODUCTS"})
+    dispatch({ type: "FILTER_PRODUCTS" });
     dispatch({ type: "SORTING_PRODUCTS", payload: products });
   }, [products, state.sorting_value, state.filters]);
 
