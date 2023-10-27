@@ -9,16 +9,23 @@ const FilterSection = () => {
   } = useFilterContext();
 
   // TO GET THE UNIQUE DATA OF EACH FIELDS
-  const getUniqueData = (data, property) => {
+  const getUniqueData = (data, attr) => {
     let newVal = data.map((curElem) => {
-      return curElem[property];
+      return curElem[attr];
     });
+
+    if (attr === "colors") {
+      // return (newVal = ["all", ...new Set([].concat(...newVal))]); in this method you have to use if else
+      newVal = newVal.flat();
+    }
     return (newVal = ["all", ...new Set(newVal)]);
   };
 
   // We Need UNIQUE Data
   const categoryOnlyData = getUniqueData(all_products, "category");
   const companyData = getUniqueData(all_products, "company");
+  const colorsData = getUniqueData(all_products, "colors");
+  console.log("colorsData", colorsData);
 
   return (
     <Wrapper>
