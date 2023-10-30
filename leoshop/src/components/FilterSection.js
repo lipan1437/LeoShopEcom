@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useFilterContext } from "../context/filter_context";
 const FilterSection = () => {
   const {
-    filters: { text, category },
+    filters: { text, category, color },
     all_products,
     updateFilterValue,
   } = useFilterContext();
@@ -79,6 +79,27 @@ const FilterSection = () => {
             })}
           </select>
         </form>
+      </div>
+
+      <div className="filter-colors colors">
+        <h3>Colors</h3>
+        <div className="filter-color-style">
+          {colorsData.map((curColor, index) => {
+            return (
+              <button
+                key={index}
+                type="button"
+                value={curColor}
+                name="color"
+                style={{ backgroundColor: curColor }}
+                className="btnStyle"
+                onClick={updateFilterValue}
+              >
+                {color === curColor ? "" : null}
+              </button>
+            );
+          })}
+        </div>
       </div>
     </Wrapper>
   );
