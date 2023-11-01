@@ -100,7 +100,7 @@ const filterReducer = (state, action) => {
           return curElem.company.toLowerCase() === company.toLowerCase();
         });
       }
-      if (color) {
+      if (color !== "all") {
         tempFilterProduct = tempFilterProduct.filter((curElem) => {
           return curElem.colors.includes(color);
         });
