@@ -148,7 +148,6 @@ const filterReducer = (state, action) => {
           minPrice: state.filters.maxPrice,
         },
       };
-
     default:
       return state;
   }
