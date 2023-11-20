@@ -62,6 +62,7 @@ const filterReducer = (state, action) => {
           case "z-a": {
             return b.name.localeCompare(a.name);
           }
+
         }
       };
 
