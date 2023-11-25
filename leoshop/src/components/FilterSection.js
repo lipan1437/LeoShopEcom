@@ -29,7 +29,7 @@ const FilterSection = () => {
   const categoryOnlyData = getUniqueData(all_products, "category");
   const companyData = getUniqueData(all_products, "company");
   const colorsData = getUniqueData(all_products, "colors");
-  console.log("colorsData", colorsData);
+  // console.log("colorsData", colorsData);
 
   return (
     <Wrapper>
@@ -49,7 +49,7 @@ const FilterSection = () => {
         <h3>Category</h3>
         <div>
           {categoryOnlyData.map((curElem, index) => {
-            console.log("curElem", curElem);
+            // console.log("curElem", curElem);
             return (
               <button
                 key={index}

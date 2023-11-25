@@ -5,7 +5,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Products from "./Pages/Products";
-import Singleproduct from "./Pages/Singleproduct";
+import SingleProduct from "./Pages/SingleProduct";
 import Cart from "./Pages/Cart";
 import Errorpage from "./Pages/Errorpage";
 import { GlobalStyle } from "./GlobalStyle";
@@ -47,7 +47,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/singleproduct/:id" element={<Singleproduct />} />
+          <Route path="/singleproduct/:id" element={<SingleProduct />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<Errorpage />} />
         </Routes>

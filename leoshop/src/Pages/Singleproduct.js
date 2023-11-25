@@ -14,7 +14,7 @@ import AddToCart from "../components/AddToCart";
 
 const API = "https://api.pujakaitem.com/api/products";
 
-const Singleproduct = () => {
+const SingleProduct = () => {
   const { getSingleProduct, isSingleLoading, singleProduct } =
     useProductContext();
 
@@ -96,9 +96,7 @@ const Singleproduct = () => {
               </p>
             </div>
             <hr />
-            {
-              stock > 0 && <AddToCart product={singleProduct} />
-            }
+            {stock > 0 && <AddToCart product={singleProduct} />}
           </div>
         </div>
       </Container>
@@ -178,4 +176,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default Singleproduct;
+export default SingleProduct;
