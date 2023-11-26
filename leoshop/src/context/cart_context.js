@@ -13,17 +13,17 @@ const initialState = {
 const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const addToCard = (id, color, amount, product) => {
+  const addToCart = (id, color, amount, product) => {
     dispatch({ type: "ADD_TO_CART", paylaod: { id, color, amount, product } });
   };
   return (
-    <CartContext.Provider value={{ ...state, addToCard }}>
+    <CartContext.Provider value={{ ...state, addToCart }}>
       {children}
     </CartContext.Provider>
   );
 };
 
-const useCartContext = ()=>{
+const useCartContext = () =>{
     return useContext(CartContext)
 }
 
